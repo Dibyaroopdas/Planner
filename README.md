@@ -6,6 +6,6 @@ The functionalities include:
 2. Shows the number of tasks present
 3. Crosses out task once it is completed.
 4. Shows all the tasks in a list
+5. User Login and Registration.
 
-
-The app currently doesnt support user registration and login,thus all the posts are entered under a common parent,be it a post from any user.
+This application uses Firebase as its database.

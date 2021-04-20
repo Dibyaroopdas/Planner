@@ -25,17 +25,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/candal"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginStart="25dp"
                 android:text="@string/title"
                 android:textSize="30sp"
                 android:id="@+id/task_title"
                 android:textColor="#AA1179aa"
                 android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
+                 />
 
-
-                />
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -43,7 +41,7 @@
                 android:layout_alignParentEnd="true"
                 android:id="@+id/delete_icon"
                 android:layout_below="@+id/task_title"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 />
 
             <ImageView
@@ -54,7 +52,7 @@
                 android:layout_marginEnd="50dp"
                 android:id="@+id/edit_icon"
                 android:layout_below="@+id/task_title"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -66,7 +64,7 @@
                 android:textColor="@color/colorPrimary"
                 android:id="@+id/is_complete_btn"
                 android:layout_below="@+id/task_title"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="5dp"/>
 
 
 

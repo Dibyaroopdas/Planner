@@ -28,15 +28,15 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="25dp"
                 android:text="@string/title"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:id="@+id/task_title"
                 android:textColor="#AA1179aa"
                 android:layout_alignParentStart="true"
                  />
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/delete"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/delete_icon"
@@ -45,11 +45,11 @@
                 />
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/edit"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="30dp"
                 android:id="@+id/edit_icon"
                 android:layout_below="@+id/task_title"
                 android:layout_marginTop="5dp"/>
@@ -59,9 +59,9 @@
                 android:layout_height="wrap_content"
                 android:text="Incomplete"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="100dp"
-                android:textSize="20sp"
-                android:textColor="@color/colorPrimary"
+                android:layout_marginEnd="60dp"
+                android:textSize="15sp"
+                android:textColor="#666755"
                 android:id="@+id/is_complete_btn"
                 android:layout_below="@+id/task_title"
                 android:layout_marginTop="5dp"/>
@@ -107,7 +107,7 @@
                 android:textSize="20sp"
                 android:id="@+id/start_date_header"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#666755"
                 />
 
             <TextView
@@ -120,7 +120,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#666755"
                 />
 
             <TextView
@@ -131,7 +131,7 @@
                 android:layout_marginStart="25dp"
                 android:textSize="20sp"
                 android:layout_marginBottom="25dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#666755"
                 />
 
             <TextView
@@ -145,7 +145,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="15dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#666755"
                 />
 
 

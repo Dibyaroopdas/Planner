@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#55b2a4f5">
     <!--android:background="#AA6200EE"-->
 
     <com.google.android.material.appbar.AppBarLayout
@@ -12,8 +13,8 @@
         android:layout_height="450dp"
         android:fitsSystemWindows="true"
         android:id="@+id/appbarlayout"
-        android:background="@drawable/diary"
-        android:alpha="0.9">
+        android:background="@drawable/pencils"
+        android:alpha="1">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -59,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/aclonica"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#9a9c96"
                 android:textSize="30dp"
                 app:layout_anchor="@id/appbarlayout"
                 android:id="@+id/number_task"

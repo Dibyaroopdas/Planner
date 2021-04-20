@@ -9,4 +9,6 @@
     <string name="add_the_end_date">Add the end date</string>
     <string name="are_you_sure_you_want_to_delete">ARE YOU SURE, YOU WANT TO DELETE THE SELECTED ITEM?</string>
     <string name="add_the_start_date">add the start date</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 </resources>

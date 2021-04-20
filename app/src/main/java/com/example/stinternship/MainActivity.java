@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.example.stinternship.Adapters.TaskAdapter;
 import com.example.stinternship.Models.TaskModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -51,10 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     public static TaskAdapter taskAdapter;
     public static Button yesBtn,noBtn;
-
-
-
-
+    FirebaseAuth mAuth;
 
 
 
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         addTaskTime.setText(date);
 
 
-        FirebaseDatabase.getInstance().getReference().child("Tasks").addValueEventListener(new ValueEventListener() {
+        FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Tasks").addValueEventListener(new ValueEventListener() {
 
             Integer count=0;
 
@@ -172,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         addTaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Tasks");
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Tasks");
                 String taskId = ref.push().getKey();
 
                 if(addTaskTitle.getText().toString().equals("")||addTaskDesc.getText().toString().equals("")
@@ -224,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<TaskModel> options =
                 new FirebaseRecyclerOptions.Builder<TaskModel>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Tasks"), TaskModel.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Tasks"), TaskModel.class)
                         .build();
 
 

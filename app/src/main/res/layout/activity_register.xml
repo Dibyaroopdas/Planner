@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Username"
+        android:id="@+id/usernameReg"
+        android:textSize="15sp"
+        android:layout_above="@+id/emailReg"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:id="@+id/emailReg"
+        android:layout_centerInParent="true"
+        android:textSize="15sp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Password"
+        android:id="@+id/passwordReg"
+        android:layout_centerInParent="true"
+        android:textSize="15sp"
+        android:layout_below="@+id/emailReg"
+        android:layout_margin="10dp"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/register"
+        android:layout_below="@+id/passwordReg"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/start_activity_btn_bg"
+        android:id="@+id/register_submit_btn"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_submit_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="81dp"
+        android:text="@string/already_signed_in_log_in_here"
+        android:textColor="#000000"
+        android:id="@+id/register_to_login"/>
+
+
+</RelativeLayout>

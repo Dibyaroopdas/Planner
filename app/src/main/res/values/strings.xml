@@ -11,4 +11,7 @@
     <string name="add_the_start_date">add the start date</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <string name="already_signed_in_log_in_here">Already signed in? Log in here</string>
+    <string name="enter_username">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
 </resources>

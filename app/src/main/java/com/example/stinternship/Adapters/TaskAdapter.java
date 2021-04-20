@@ -19,6 +19,7 @@ import com.example.stinternship.Models.TaskModel;
 import com.example.stinternship.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
@@ -34,6 +35,7 @@ import static com.example.stinternship.MainActivity.noBtn;
 import static com.example.stinternship.MainActivity.yesBtn;
 
 public class TaskAdapter extends FirebaseRecyclerAdapter<TaskModel, TaskAdapter.myViewHolder> {
+    FirebaseAuth mAuth;
 
 
     public TaskAdapter(@NonNull FirebaseRecyclerOptions<TaskModel> options) {
@@ -54,13 +56,17 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<TaskModel, TaskAdapter.
         holder.task_sdate.setText(model.getStartDate());
         holder.task_edate.setText(model.getEndDate());
 
+
+
+
         holder.isCompletedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(model.getCompleted()){
-                    FirebaseDatabase.getInstance().getReference().child("Tasks").child(getRef(position).getKey()).child("completed").setValue(false);
+                    FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Tasks").child(getRef(position).getKey()).child("completed").setValue(false);
                 }else{
-                    FirebaseDatabase.getInstance().getReference().child("Tasks").child(getRef(position).getKey()).child("completed").setValue(true);
+                    FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Tasks").child(getRef(position).getKey()).child("completed").setValue(true);
                 }
             }
         });
@@ -83,7 +89,7 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<TaskModel, TaskAdapter.
                 yesBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        FirebaseDatabase.getInstance().getReference().child("Tasks").child(getRef(position).getKey()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Tasks").child(getRef(position).getKey()).removeValue();
                         dialogbox.setVisibility(INVISIBLE);
                     }
                 });
@@ -136,7 +142,7 @@ public class TaskAdapter extends FirebaseRecyclerAdapter<TaskModel, TaskAdapter.
                         map.put("endDate",edit_end.getText().toString());
                         map.put("completed",false);
 
-                        FirebaseDatabase.getInstance().getReference().child("Tasks").child(getRef(position).getKey())
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Tasks").child(getRef(position).getKey())
                                 .setValue(map);
 
                         dialogPlus.dismiss();

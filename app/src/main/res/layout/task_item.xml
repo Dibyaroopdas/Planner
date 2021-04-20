@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="30dp"
+    android:layout_margin="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/task_title_layout"
+            android:background="@drawable/task_item_bg"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/candal"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="25dp"
+                android:text="@string/title"
+                android:textSize="30sp"
+                android:id="@+id/task_title"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+
+
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/delete_icon"
+                android:layout_below="@+id/task_title"
+                android:layout_marginTop="15dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/edit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="50dp"
+                android:id="@+id/edit_icon"
+                android:layout_below="@+id/task_title"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Incomplete"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="100dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/is_complete_btn"
+                android:layout_below="@+id/task_title"
+                android:layout_marginTop="15dp"/>
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION"
+            android:fontFamily="@font/candal"
+            android:layout_below="@id/task_title_layout"
+            android:id="@+id/description"
+            android:textSize="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:id="@+id/task_desc"
+            android:padding="5dp"
+            android:textColor="#000000"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/task_desc"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/task_item_date_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="start date : "
+                android:layout_marginStart="25dp"
+                android:textSize="20sp"
+                android:id="@+id/start_date_header"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample start date"
+                android:layout_marginStart="25dp"
+                android:textSize="20sp"
+                android:id="@+id/start_date"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="end date : "
+                android:layout_below="@+id/start_date_header"
+                android:layout_marginStart="25dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="25dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample end date"
+                android:layout_below="@+id/start_date_header"
+                android:layout_marginStart="25dp"
+                android:textSize="20sp"
+                android:id="@+id/end_date"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

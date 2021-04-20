@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:fitsSystemWindows="true"
+        android:id="@+id/appbarlayout"
+        android:background="@drawable/diary">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#ffffff"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            android:id="@+id/collapsing_toolbar">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_btn"
+                android:text="@string/add"
+                app:layout_anchor="@id/appbarlayout"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/add_button_bg"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_task_end_date"
+                app:layout_anchor="@id/appbarlayout"
+                android:text="@string/time"
+                android:textSize="25sp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="0dp"
+                android:id="@+id/add_task_time"
+                android:background="@drawable/add_task_time_bg"
+                android:padding="15dp"
+                android:paddingStart="65dp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/candal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@color/colorPrimary"
+                android:textSize="40dp"
+                app:layout_anchor="@id/appbarlayout"
+                android:id="@+id/number_task"
+                android:background="@drawable/number_task_bg"
+                android:padding="15dp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PLANNER"
+                android:textSize="80dp"
+                android:layout_marginTop="85dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="@drawable/planner_bg"
+                android:padding="15dp"/>
+
+
+
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/calendar"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="100dp"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_collapseMode="pin"
+                android:id="@+id/toolbar"
+                android:background="#fa4f00"/>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/add_task_bg"
+        android:id="@+id/addRelativeLayout"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_alignParentEnd="true"
+            android:padding="20dp"
+            android:id="@+id/add_task_back_btn"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scroll_view"
+            android:layout_below="@+id/add_task_back_btn">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_a_title"
+
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="20sp"
+                    android:id="@+id/add_task_title"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_task_title"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="@string/add_a_description"
+                    android:id="@+id/add_task_desc"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_task_desc"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="@string/add_the_end_date"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/add_task_end_date"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_task_end_date"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="@string/add_the_start_date"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/add_task_start_date"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/add_task_end_date"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="50dp"
+                    android:text="@string/add_task"
+                    android:background="@drawable/add_button_bg"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:id="@+id/add_task_btn" />
+
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="10dp"
+            android:id="@+id/recycler_view_task" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:background="@drawable/dialogbox_bg"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        android:id="@+id/dialog_box"
+        android:elevation="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/dialog_txt_bg"
+            android:id="@+id/dialog_text"
+            android:text="@string/are_you_sure_you_want_to_delete"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+
+        <Button
+            android:layout_width="175dp"
+            android:layout_height="60dp"
+            android:text="Yes"
+            android:layout_below="@+id/dialog_text"
+            android:background="@drawable/yes_btn_bg"
+            android:id="@+id/dialog_yes_btn"/>
+
+        <Button
+            android:layout_width="175dp"
+            android:layout_height="60dp"
+            android:text="No"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/dialog_text"
+            android:background="@drawable/no_btn_bg"
+            android:id="@+id/dialog_no_btn"/>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

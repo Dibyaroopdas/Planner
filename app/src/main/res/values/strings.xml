@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">STinternship</string>
+    <string name="add">add task</string>
+    <string name="title">Title</string>
+    <string name="add_a_title">Add a title</string>
+    <string name="add_a_description">Add a description</string>
+    <string name="time">Time</string>
+    <string name="add_task">Add Task</string>
+    <string name="add_the_end_date">Add the end date</string>
+    <string name="are_you_sure_you_want_to_delete">ARE YOU SURE, YOU WANT TO DELETE THE SELECTED ITEM?</string>
+    <string name="add_the_start_date">add the start date</string>
+</resources>

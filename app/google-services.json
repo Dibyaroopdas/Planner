@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "39807733670",
+    "project_id": "stinternship-41160",
+    "storage_bucket": "stinternship-41160.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39807733670:android:c5ecbd7837ca8a46d98967",
+        "android_client_info": {
+          "package_name": "com.example.stinternship"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39807733670-fer3tcooj4ib513svcd821d346jghodq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAHX3C9ZYYyWbNGBVgpeTpBaUqd9wwEMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39807733670-fer3tcooj4ib513svcd821d346jghodq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="30dp"
     android:layout_margin="5dp"
+    android:elevation="20dp"
     >
 
     <RelativeLayout
@@ -29,7 +30,7 @@
                 android:text="@string/title"
                 android:textSize="30sp"
                 android:id="@+id/task_title"
-                android:textColor="@color/colorPrimary"
+                android:textColor="#AA1179aa"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
 

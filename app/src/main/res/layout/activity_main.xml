@@ -24,6 +24,8 @@
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             android:id="@+id/collapsing_toolbar">
 
+
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
